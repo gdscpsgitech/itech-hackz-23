@@ -25,11 +25,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
 
+    <script src="https://kit.fontawesome.com/29c1c33eeb.js" crossorigin="anonymous"></script>
     
     <!-- for the swiper -->
     <style>
-        .swiper-container {
+        .swiper-wrapper {
             width: 100%;
             padding-top: 50px;
             padding-bottom: 50px;
@@ -47,6 +49,7 @@
 <!-- svg images for scroll option -->
 <body class="is-loading"><svg xmlns="http://www.w3.org/2000/svg" version="1.1"
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
+    
     <symbol id="icon-8a75e9205b2d7697ad826d592ebf05f0" viewBox="0 0 40 40">
         <path
             d="M19.8,34.2c-0.3,0-0.3-0.1-0.4-0.1L6.6,21.4c-0.1-0.1-0.1-0.1-0.1-0.4c0-0.3,0.1-0.3,0.1-0.4l1.5-1.5 C8.2,19.1,8.2,19,8.5,19s0.3,0.1,0.4,0.1l9.2,9.2V5.9c0-0.1,0-0.2,0-0.2c0,0,0,0,0,0c0.1-0.1,0.2-0.1,0.4-0.1H21 c0.2,0,0.4,0.1,0.5,0.1c0,0,0,0.1,0,0.2v22.4l9.2-9.2c0.1-0.1,0.1-0.1,0.4-0.1c0.3,0,0.3,0.1,0.4,0.1l1.5,1.5 c0.1,0.1,0.1,0.1,0.1,0.4c0,0.3-0.1,0.3-0.1,0.4L20.2,34.1C20.1,34.1,20.1,34.2,19.8,34.2z" />
@@ -91,6 +94,9 @@
 </svg>
 <body class="is-loading">
     </svg>
+    <canvas id="stars"></canvas>
+    <script src="stars.js"></script>
+    
     <div id="wrapper">
         <div id="main">
             <div class="inner">
@@ -105,48 +111,55 @@
                                     <u>Coimbatore</u>, <u>Tamilnadu</span></u></p>
                             <p id="text73" class="style1"><strong><em>Innovate</em></strong> |
                                 <strong><em>Create</em></strong> |
-                                <strong><em>Disrupt</em></strong>
+                                <strong><em>Accelerate</em></strong>
                             </p>
-
-                            <!-- count down timer -->
                             <div class="countdown">
-                            <script type="text/javascript" >
-                                // Set the date we're counting down to
-                                var countDownDate = new Date("Mar 21, 2023 12:00:00").getTime();
 
-                                // Update the count down every 1 second
-                                var x = setInterval(function() {
-
-                                    // Get today's date and time
-                                    var now = new Date().getTime();
-
-                                    // Find the distance between now and the count down date
-                                    var distance = countDownDate - now;
-
-                                    // Time calculations for days, hours, minutes and seconds
-                                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                                    // Display the result in the element with class="countdown"
-                                    document.querySelector(".countdown").innerHTML = days + "d " + hours + "h "
-                                    + minutes + "m " + seconds + "s ";
-
-                                    // If the count down is finished, display a message
-                                    if (distance < 0) {
-                                        clearInterval(x);
-                                        document.querySelector(".countdown").innerHTML = "EXPIRED";
-                                    }
-                                }, 1000);
-                            </script>
-                            </div>
-                            <div id="timer01" class="timer"></div>
+                                <script type="text/javascript" >
+                                    // Set the date we're counting down to
+                                    var countDownDate = new Date("Mar 20, 2023 12:00:00").getTime();
+    
+                                    // Update the count down every 1 second
+                                    var x = setInterval(function() {
+    
+                                        // Get today's date and time
+                                        var now = new Date().getTime();
+    
+                                        // Find the distance between now and the count down date
+                                        var distance = countDownDate - now;
+    
+                                        // Time calculations for days, hours, minutes and seconds
+                                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                                        // Display the result in the element with class="countdown"
+                                        document.querySelector(".countdown").innerHTML = days + "d " + hours + "h "
+                                        + minutes + "m " + seconds + "s ";
+    
+                                        // If the count down is finished, display a message
+                                        if (distance < 0) {
+                                            clearInterval(x);
+                                            document.querySelector(".countdown").innerHTML = "EXPIRED";
+                                        }
+                                    }, 1000);
+                                </script>
+                                </div>
+                                <div id="timer01" class="timer" ></div>
+                            
+                            <!-- <div 
+                                class="apply-button" 
+                                data-hackathon-slug="itech-hackz" 
+                                data-button-theme="dark-inverted"
+                                style="height: 44px; width: 312px"
+                            ></div> -->
+                            
                             <ul id="buttons03" class="style1 buttons">
-                                <li><a href="#one" class="button n01"><svg>
-                                            <use xlink:href="#icon-8a75e9205b2d7697ad826d592ebf05f0"></use>
-                                        </svg><span class="label">Scroll me</span></a></li>
+                                <li><a href="" class="button n01">
+                                <span class="label" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" > <i class="fa fa-whatsapp" aria-hidden="true" ></i>Join via Whatsapp</span></a></li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -162,7 +175,7 @@
                                 <div class="prizebox">
                                     <span></span>
                                     <div class="prizecontent">
-                                        <h2>RUNNER-UP</h2>
+                                        <h2>2nd</h2>
                                         <p>iTech-Hackz runner-up will get a grand prize of </p>
                                         <p style="color:#000; font-weight: 1000; font-size: xx-large;">₹5000</p>
                                         
@@ -171,7 +184,7 @@
                                 <div class="prizebox">
                                     <span></span>
                                     <div class="prizecontent">
-                                        <h2>WINNER</h2>
+                                        <h2>1st</h2>
                                         <p>iTech-Hackz winner will get a grand prize of </p>
                                         <p style="color:#000; font-weight: 1000; font-size: xx-large;">₹7500</p>
                                         
@@ -180,7 +193,7 @@
                                 <div class="prizebox" style="height: 325px;">
                                     <span></span>
                                     <div class="prizecontent">
-                                        <h2>SECOND RUNNER-UP</h2>
+                                        <h2>3rd</h2>
                                         <p>iTech-Hackz second runner-up will get a grand prize of </p>
                                         <p style="color:#000; font-weight: 1000; font-size: xx-large;">₹3000</p>
                                         
@@ -267,22 +280,25 @@
                         <div class="inner" data-onvisible-trigger="1">
                             <h2 id="text08" class="style2">Sp<u>o</u>nsor<span style="color: #FFD900">Z</span></h2>
                             <h3 id="text10" class="style7">We are together...</h3>
-                                    <div class="sponssection">
-                                        <div class="sponsrow">
-                                            <div class="sponscolumn">
-                                                <img src="https://th.bing.com/th/id/R.5eb1959636a370b661bc91940fe49cee?rik=DiotHJlkKQR6dg&riu=http%3a%2f%2fwww.datwebdigital.com%2fDWD%2fwp-content%2fuploads%2f2012%2f06%2flogo-design.jpg&ehk=fa8lsC0cm1nXH1dOqP%2f9dC1ohF3%2bcobEoqkMOaxrV2I%3d&risl=&pid=ImgRaw&r=0"
-                                                    alt="Image 1" style="height: 230px;">
-                                            </div>
-                                            <div class="sponscolumn">
-                                                <img src="https://th.bing.com/th/id/OIP.4rZ4ZPxFnT6vMCad7bnPugHaHa?pid=ImgDet&rs=1" alt="Image 2">
-                                            </div>
-                                            <div class="sponscolumn">
-                                                <img src="https://th.bing.com/th/id/OIP.ztP1TDog49eoY3S5yvYJ0gHaEK?pid=ImgDet&rs=1" alt="Image 3"
-                                                style="height: 230px;">
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
+                            <p id="text01" class="style4"><strong>platinum Sponsers</strong>
+                                    <div class="sponscard">
+    
+                                        <img src="./Devfolio_Logo-White.png">
+                                        <img src="./Polygon_Logo-White.png">
+                                      </div>
+                            <p id="text01" class="style4"><strong>Gold Sponsers</strong>        
+                                      <div class="sponscard">
+                                        
+                                        <img src="./Replit-Dark-Background.png">
+                                        <img src="./Solana Dark.png">
+                                        <img src="./Filecoin White.png">
+                                      </div>
+                            <p id="text01" class="style4"><strong>Web3 partner</strong>       
+                                      <div class="sponscard">
+                                        
+                                        <img src="https://cdn-gabko.nitrocdn.com/RZouYnusfBidPRMjdxqfKZDlLqDTJCGX/assets/images/optimized/rev-239c08b/wp-content/uploads/2022/10/new-logo-zeeve.svg"
+                                        style="height: 150px; ">
+                                      </div>   
                             
                             <ul id="icons02" class="style2 icons">
                                 <li><a class="n01" href="#four" aria-label="Arrow Down"><svg>
@@ -305,29 +321,31 @@
                         <div class="inner" data-onvisible-trigger="1">
                             <p id="text20" class="style4">fit your ideas into</p>
                             <h2 id="text31" class="style2">Themes</h2>
-                            <div class="swiper-container">
+                            
+                            <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://th.bing.com/th/id/R.91b57dfa9e4379221761fd0ecdc2bbdc?rik=iptzIVfBv4QSYw&riu=http%3a%2f%2fracetrack.ai%2fwp-content%2fuploads%2f2019%2f05%2fHow-Artificial-Intelligence-is-Changing-Our-Daily-Lives.jpg&ehk=bSTuwxFlKqWumKXd02yzv9YVzgn2qnd8SQpHrm8h3FM%3d&risl=&pid=ImgRaw&r=0)">
-                                    </div>
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://th.bing.com/th/id/OIP.f5hSjeROCI1WY7qJUSj2EQHaD4?pid=ImgDet&rs=1)">
-                                    </div>
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://timestech.in/wp-content/uploads/2021/06/US-Cyber-Security-Market.jpeg)">
-                                    </div>
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://www.techwebspace.com/wp-content/uploads/2018/03/IoT-in-the-Wokrplace-1.jpg)">
-                                    </div>
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://www.featuretechnology.com/wp-content/uploads/2019/05/Blockchain.jpg)">
-                                    </div>
-                                    <div class="swiper-slide"
-                                        style="background-image:url(https://www.planbox.com/wp-content/uploads/2020/05/AdobeStock_292952756-scaled.jpeg)">
-                                    </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://th.bing.com/th/id/R.91b57dfa9e4379221761fd0ecdc2bbdc?rik=iptzIVfBv4QSYw&riu=http%3a%2f%2fracetrack.ai%2fwp-content%2fuploads%2f2019%2f05%2fHow-Artificial-Intelligence-is-Changing-Our-Daily-Lives.jpg&ehk=bSTuwxFlKqWumKXd02yzv9YVzgn2qnd8SQpHrm8h3FM%3d&risl=&pid=ImgRaw&r=0" style="height: 285px;">
+                                    
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://th.bing.com/th/id/OIP.f5hSjeROCI1WY7qJUSj2EQHaD4?pid=ImgDet&rs=1" style="height: 299px;">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://timestech.in/wp-content/uploads/2021/06/US-Cyber-Security-Market.jpeg" style="height: 299px;">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://www.techwebspace.com/wp-content/uploads/2018/03/IoT-in-the-Wokrplace-1.jpg" style="height: 299px;">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://www.featuretechnology.com/wp-content/uploads/2019/05/Blockchain.jpg" style="height: 299px;">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://www.planbox.com/wp-content/uploads/2020/05/AdobeStock_292952756-scaled.jpeg" style="height: 299px;">
+                                  </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
+                                <div class="swiper-pagination" style="color: white;"></div>
+                              </div>
                             <ul id="icons04" class="style2 icons">
                                 <li><a class="n01" href="#five" aria-label="Arrow Down"><svg>
                                             <use xlink:href="#icon-8a75e9205b2d7697ad826d592ebf05f0"></use>
@@ -356,36 +374,60 @@
                                             <span>What is iTech HackZ'23</span>
                                             <i class="fas fa-chevron-down d-arrow"></i>
                                         </button>
-                                        <p>iTech HackZ'23 is a hackathon where programmers, designers, and other tech
-                                            enthusiasts come together to collaborate on a project, typically over a
-                                            period of a few days to a week. The main goal of a hackathon is to create a
-                                            working prototype or solution to a specific problem or challenge.
+                                        <p>iTech HackZ'23 is a hackathon where programmers, designers, and other tech enthusiasts come together to collaborate on a project.
                                         </p>
                                     </div>
-
+                                    <div class="question">
+                                        <button>
+                                            <span>Is there any registration cost?</span>
+                                            <i class="fas fa-chevron-down d-arrow"></i>
+                                        </button>
+                                        <p>No registration cost for itech-hackz
+                                        </p>
+                                    </div>
+                                    <div class="question">
+                                        <button>
+                                            <span>Is this hackathon an online event or offline?</span>
+                                            <i class="fas fa-chevron-down d-arrow"></i>
+                                        </button>
+                                        <p>Offline event
+                                        </p>
+                                    </div>
+                                    <div class="question">
+                                        <button>
+                                            <span>I am beginner, Can I participate?</span>
+                                            <i class="fas fa-chevron-down d-arrow"></i>
+                                        </button>
+                                        <p>Without a doubt!
+                                        </p>
+                                    </div>
                                     <div class="question">
                                         <button>
                                             <span> How long does the hackathon last?</span>
                                             <i class="fas fa-chevron-down d-arrow"></i>
                                         </button>
-                                        <p>iTech HackZ'23 will last for 36 hours</p>
+                                        <p>iTech HackZ'23 will last for 30 hours</p>
                                     </div>
-
-                                    <div class="question">
-                                        <button>
-                                            <span>How are the projects judged?</span>
-                                            <i class="fas fa-chevron-down d-arrow"></i>
-                                        </button>
-                                        <p>Projects are typically judged based on a set of criteria established by the organizers, such as creativity, technical innovation, user experience, and presentation.</p>
-                                    </div>
-
                                     <div class="question">
                                         <button>
                                             <span>Do I need to have a team to participate?</span>
                                             <i class="fas fa-chevron-down d-arrow"></i>
                                         </button>
-                                        <p>It is not necessary to have a team to participate in a hackathon, but forming
-                                            a team  of 2-3 can be beneficial</p>
+                                        <p>It is not necessary to have a team to participate in a hackathon, but forming a team  min of 2 and max of 3 can be beneficial</p>
+                                    </div>
+                                    <div class="question">
+                                        <button>
+                                            <span>How are the projects judged?</span>
+                                            <i class="fas fa-chevron-down d-arrow"></i>
+                                        </button>
+                                        <p>Projects are typically judged based on a set of criteria such as creativity, technical innovation, user experience, and presentation.</p>
+                                    </div>
+                                    <div class="question">
+                                        <button>
+                                            <span>I have a question related to hackathon which is not listed above!</span>
+                                            <i class="fas fa-chevron-down d-arrow"></i>
+                                        </button>
+                                        <p>Just drop us a mail at gdsc@psgitech.ac.in</p>
                                     </div>
                                 </div>
                             </div>
@@ -398,14 +440,14 @@
                 <!-- Footer Section -->
                 <hr id="divider03" class="style1 full screen">
                 <ul id="icons03" class="style1 icons">
-                    <li><a class="n01" href="https://twitter.com/gdscpsgitar" aria-label="Twitter"><svg>
+                    <li><a class="n01" href="https://twitter.com/gdscpsgitar" aria-label="Twitter" target="_blank"><svg>
                                 <use xlink:href="#icon-0c4db87eff374f0f1ef47f8f043f0132"></use>
                             </svg><span class="label">Twitter</span></a><svg xmlns="http://www.w3.org/2000/svg" x="0px"
                             y="0px" viewBox="0 0 40 40">
                             <polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1"
                                 vector-effect="non-scaling-stroke" />
                         </svg></li>
-                    <li><a class="n02" href="https://www.instagram.com/gdscpsgitar/" aria-label="Instagram"><svg>
+                    <li><a class="n02" href="https://www.instagram.com/gdscpsgitar/" aria-label="Instagram" target="_blank"><svg>
                                 <use xlink:href="#icon-85976685de3e4af37529a1ce5d57d2a7"></use>
                             </svg><span class="label">Instagram</span></a><svg xmlns="http://www.w3.org/2000/svg"
                             x="0px" y="0px" viewBox="0 0 40 40">
@@ -413,7 +455,7 @@
                                 vector-effect="non-scaling-stroke" />
                         </svg></li>
                     <li><a class="n03" href="/cdn-cgi/l/email-protection#1374776070536360747a6776707b3d72703d7a7d"
-                            aria-label="Email"><svg>
+                            aria-label="Email" target="_blank"><svg>
                                 <use xlink:href="#icon-c3c8e1063e3b7f84f6b54712741de139"></use>
                             </svg><span class="label">Email</span></a><svg xmlns="http://www.w3.org/2000/svg" x="0px"
                             y="0px" viewBox="0 0 40 40">
@@ -427,7 +469,7 @@
                             <polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1"
                                 vector-effect="non-scaling-stroke" />
                         </svg></li>
-                    <li><a class="n05" href="https://linktr.ee/gdscpsgitech" aria-label="Linktree"><svg>
+                    <li><a class="n05" href="https://linktr.ee/gdscpsgitech" aria-label="Linktree" target="_blank"><svg>
                                 <use xlink:href="#icon-b43e250fbce143ba2d80fbb75f402dd6"></use>
                             </svg><span class="label">Linktree</span></a><svg xmlns="http://www.w3.org/2000/svg" x="0px"
                             y="0px" viewBox="0 0 40 40">
@@ -446,21 +488,32 @@
     
     <script>
         // For swiper theme
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflow: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true
-            },
-            loop: true
-        });
+
+        var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      
+    });
+    var paginationBullets = document.querySelectorAll('.swiper-pagination-bullet');
+
+    paginationBullets.forEach(function(bullet) {
+        bullet.style.backgroundColor = '#FFD900';
+    });
+
+ 
+ 
 
         //For FAQ
         const buttons = document.querySelectorAll('button');
@@ -477,6 +530,65 @@
 
 
     </script>
+
+<script>
+    // Set up the canvas and context
+    var canvas = document.getElementById('stars');
+    var ctx = canvas.getContext('2d');
+
+    // Set the width and height of the canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Create an array to hold the stars
+    var numStars = 500;
+    var stars = [];
+
+    // Create the stars
+    for (var i = 0; i < numStars; i++) {
+      var x = Math.random() * canvas.width;
+      var y = Math.random() * canvas.height;
+      var size = Math.random() * 3;
+      var speed = 1 + Math.random() * 5;
+      stars.push({ x: x, y: y, size: size, speed: speed });
+    }
+
+    // Animate the stars
+    function animateStars() {
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Move the stars and draw them with a gradient
+      for (var i = 0; i < numStars; i++) {
+        var star = stars[i];
+        star.y -= star.speed;
+        if (star.y < 0) {
+          star.y = canvas.height;
+        }
+        var gradient = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size);
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Repeat the animation
+      requestAnimationFrame(animateStars);
+    }
+
+
+    // Start the animation
+    animateStars();
+
+    // Resize the canvas when the window size changes
+    window.addEventListener('resize', function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+  </script>
 
 <!-- The rest -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
